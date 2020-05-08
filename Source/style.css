@@ -3,6 +3,19 @@ body {
   padding: 0;
   background-color: gainsboro;
 }
+
+#searchBar{
+padding: 20px;
+}
+
+.searchCountries{
+padding: 0.9rem;
+border-radius: 5px;
+border-color: lightcyan;
+width: 30%;
+margin-left: 4em;
+}
+
 #countryList {
   display: flex;
   flex-direction: row;

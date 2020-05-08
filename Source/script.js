@@ -1,9 +1,9 @@
 
-function getData(URL) {
+    function getData(URL) {
     fetch(URL)
       .then((response) => response.json())
       .then((allCountries) => {
-        console.log(allCountries[0]);
+          
         allCountries.map((country) => {
           const countryDiv = makeCountry(country);
           const countryList = document.getElementById(`countryList`);
@@ -11,6 +11,7 @@ function getData(URL) {
         });
       });
   }
+
   function makeCountry(countryObj) {
     const countryDiv = document.createElement(`div`);
     countryDiv.className = `country`;
@@ -35,6 +36,12 @@ function getData(URL) {
     sentenceElement.innerHTML = `<b>${infoTitle}</b> : ${value}`;
     return sentenceElement;
   }
+
+//   function searchCountries(countryInput){
+//     allCountries.filter{
+//         xxxxx
+//     }
+// }
   function onLoad() {
     getData(`https://restcountries.eu/rest/v2/all`);
   }
